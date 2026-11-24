@@ -1,0 +1,192 @@
+:root {
+    --background: #10120e;
+    --surface: #1f241c;
+    --surface-light: #343d2a;
+
+    --primary: #676c4b;
+    --secondary: #a68a64;
+
+    --text: #f5f3eb;
+    --text-muted: #c2c5aa;
+
+    --border: rgba(194, 197, 170, 0.2);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--background);
+
+    color: var(--text);
+}
+
+.site-header {
+    padding: 20px 40px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom:
+        1px solid var(--border);
+
+    background: var(--surface);
+}
+
+.site-header h1 {
+    margin: 0;
+
+    color: var(--secondary);
+}
+
+nav {
+    display: flex;
+
+    gap: 20px;
+}
+
+nav a {
+    color: var(--text-muted);
+
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--text);
+}
+
+.page-content {
+    width: min(
+        1100px,
+        calc(100% - 40px)
+    );
+
+    margin: 0 auto;
+
+    padding: 50px 0;
+}
+
+.hero {
+    padding: 40px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 16px;
+
+    background: var(--surface);
+}
+
+.hero h2 {
+    margin-top: 0;
+}
+
+button {
+    padding:
+        12px 20px;
+
+    border: 0;
+
+    border-radius: 8px;
+
+    background: var(--primary);
+
+    color: white;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--surface-light);
+}
+
+.cards {
+    margin-top: 30px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+
+    gap: 20px;
+}
+
+.card {
+    padding: 25px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 12px;
+
+    background: var(--surface);
+}
+
+.card h3 {
+    margin-top: 0;
+
+    color: var(--secondary);
+}
+
+.card p {
+    color: var(--text-muted);
+}
+
+.patient-section {
+    margin-top: 40px;
+}
+
+.patient {
+    margin-bottom: 10px;
+
+    padding: 15px;
+
+    border-left:
+        4px solid var(--primary);
+
+    background: var(--surface);
+}
+
+.patient strong {
+    color: var(--secondary);
+}
+
+.site-footer {
+    padding: 25px;
+
+    text-align: center;
+
+    border-top:
+        1px solid var(--border);
+
+    color: var(--text-muted);
+}
+
+@media (max-width: 700px) {
+
+    .site-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+}
